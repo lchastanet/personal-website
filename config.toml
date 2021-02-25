@@ -1,0 +1,8 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Loris.space"
+theme = "monkey-theme"
+
+[markup]
+  [markup.highlight]
+    style = "dracula"
