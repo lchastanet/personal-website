@@ -2,7 +2,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{ $style := resources.Get "css/style.css" | resources.PostCSS (dict "use" "postcss-cssnext") | minify }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
-    <title>Document</title>
+    {{ $options := (dict "targetPath" "css/main.css" "enableSourceMap" true "precision" 6 "includePaths" (slice
+    "node_modules")) }}
+    {{ $style := resources.Get "css/main.css" | resources.ToCSS $options | resources.PostCSS (dict "use" "postcss-cssnext") | minify }}
+    <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}">
+    <title>{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}</title>
 </head>

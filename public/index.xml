@@ -14,7 +14,7 @@
       
       <guid>http://example.org/posts/array-js-foreach/</guid>
       <description>La méthode forEarch sur les tableaux en javascript. Cette méthode permet de parcourir un tableau et d&amp;rsquo;effectuer une opération sur chaque élément parcourus, cette méthode ne modifie pas les éléments du tableau parcouru.
-const numbers = [1, 2, 3, 4, 5] numbers.forEach((item, index) =&amp;gt; { console.log(`a[${index}] = ${item}`) item++ }) console.log(numbers) </description>
+const numbers = [1, 2, 3, 4, 5] numbers.forEach((item, index) =&amp;gt; { console.log(`a[${index}] = ${item}`) }) </description>
     </item>
     
     <item>
