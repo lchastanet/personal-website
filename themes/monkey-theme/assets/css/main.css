@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 @import "_reset";
+@import "_nav";
 
 body {
     background-color: #ffff;

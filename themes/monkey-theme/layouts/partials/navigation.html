@@ -1,11 +1,14 @@
 {{ if .Site.Menus.main }}
-<ul class="">
-    {{ range .Site.Menus.main }}
-    <li class="">
-        <a class="" href="{{ .URL }}" title="{{ .Name }} page">
-            {{ .Name }}
-        </a>
-    </li>
-    {{ end }}
-</ul>
+<nav class="nav" role="navigation">
+    <ul class="navList">
+        {{ range .Site.Menus.main }}
+        <li class="navItem">
+            {{ .Pre }}
+            <a class="navLink" href="{{ .URL }}" title="{{ .Name }} page">
+                {{ .Name }}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</nav>
 {{ end }}

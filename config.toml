@@ -2,7 +2,7 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Loris.space"
 theme = "monkey-theme"
-Paginate = 2
+paginate = 2
 
 [markup]
 
@@ -14,27 +14,30 @@ style = "dracula"
 [[menu.main]]
 identifier = "home"
 name = "Home"
-pre = ""
+pre = "<i class='fas fa-home'></i>"
 url = "/"
 weight = 1
 
 [[menu.main]]
 identifier = "posts"
 name = "Posts"
-pre = ""
 url = "/posts"
 weight = 2
 
 [[menu.main]]
+identifier = "projects"
+name = "Projects"
+url = "/projects"
+weight = 3
+
+[[menu.main]]
 identifier = "about"
 name = "About"
-pre = ""
 url = "/about"
-weight = 3
+weight = 4
 
 [[menu.main]]
 identifier = "contact"
 name = "Contact"
-pre = ""
 url = "/contact"
-weight = 4
+weight = 5
