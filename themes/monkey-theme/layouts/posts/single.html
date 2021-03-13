@@ -1,6 +1,7 @@
 {{ define "main" }}
 <section id="main">
     <h1 id="title">{{ .Title }}</h1>
+    <h4 id="date"> {{ .Date.Format "02/01/2006" }} </h4>
     <div>
         <article id="content">
             {{ .Content }}
@@ -9,9 +10,6 @@
 </section>
 <aside id="meta">
     <div>
-        <section>
-            <h4 id="date"> {{ .Date.Format "02/01/2006" }} </h4>
-        </section>
         {{ with .Params.topics }}
         <ul id="topics">
             {{ range . }}

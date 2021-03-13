@@ -8,6 +8,8 @@ draft: true
 
 Cette méthode permet de parcourir un tableau et d'effectuer une opération sur chaque élément parcourus, cette méthode **ne modifie pas** les éléments du tableau parcouru.
 
+<!--more-->
+
 ```js
 const numbers = [1, 2, 3, 4, 5]
 

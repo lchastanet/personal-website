@@ -8,6 +8,8 @@ draft: true
 
 Il est possible de ne charger uniquement les image au quand elle deviennent visibles. Pour ce faire il faut ajouter le l'attribut loading à notre image.
 
+<!--more-->
+
 ```html
 <img src="image.png" loading="lazy" alt="…" width="200" height="200" />
 ```
