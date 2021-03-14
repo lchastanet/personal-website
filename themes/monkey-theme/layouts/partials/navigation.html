@@ -1,13 +1,24 @@
 {{ if .Site.Menus.main }}
 <nav class="nav hide" role="navigation">
+    <ul class="langList">
+        {{ range $.Site.Home.AllTranslations }}
+        <li
+            class="langItem {{ if eq $.Site.Language .Language }}bg-white{{ end }}"
+        >
+            <a class="langLink" href="{{ .Permalink }}">{{ .Language }}</a>
+        </li>
+        {{ end }}
+    </ul>
     <ul class="navList">
         {{ $current := . }} {{ range .Site.Menus.main }} {{ $active := or
         ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
         {{ $active = or $active (eq .Name $current.Title) }} {{ $active = or
         $active (and (eq .Name "Posts") (eq $current.Section "posts")) }} {{
         $active = or $active (and (eq .Name "Projects") (eq $current.Section
-        "projects")) }} {{ $active = or $active (and (eq .Name "Tags") (eq
-        $current.Section "tags")) }}
+        "projects")) }} {{ $active = or $active (and (eq .Name "Articles") (eq
+        $current.Section "articles")) }} {{ $active = or $active (and (eq .Name
+        "Projets") (eq $current.Section "projets")) }} {{ $active = or $active
+        (and (eq .Name "Tags") (eq $current.Section "tags")) }}
         <li class="navItem">
             {{ .Pre }}
             <a

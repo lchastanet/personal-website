@@ -34,7 +34,30 @@
 }
 
 .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     opacity: 100;
+}
+
+.langList {
+    position: fixed;
+    left: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.langLink {
+    text-decoration: none;
+    color: var(--main-black);
+}
+
+.langItem {
+    margin: 5px;
+    padding: 5px;
 }
 
 @media (max-width: 450px) {

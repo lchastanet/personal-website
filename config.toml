@@ -1,43 +1,81 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "Loris.space"
 theme = "monkey-theme"
 paginate = 2
+DefaultContentLanguage = "fr"
 
 [markup]
+    [markup.highlight]
+        style = "dracula"
 
-[markup.highlight]
-style = "dracula"
+[languages]
+    [languages.fr]
+        title = "Mon blogue"
+        languageName = "Français"
+        contentDir = "content/fr"
+        weight = 10
+        [[languages.fr.menu.main]]
+            identifier = "home"
+            name = "Accueil"
+            url = "/"
+            weight = 1
 
-[menu]
+        [[languages.fr.menu.main]]
+            identifier = "posts"
+            name = "Articles"
+            url = "/articles"
+            weight = 2
 
-[[menu.main]]
-identifier = "home"
-name = "Home"
-pre = "<i class='fas fa-home'></i>"
-url = "/"
-weight = 1
+        [[languages.fr.menu.main]]
+            identifier = "projects"
+            name = "Projets"
+            url = "/projets"
+            weight = 3
 
-[[menu.main]]
-identifier = "posts"
-name = "Posts"
-url = "/posts"
-weight = 2
+        [[languages.fr.menu.main]]
+            identifier = "about"
+            name = "A propos"
+            url = "/a-propos"
+            weight = 4
 
-[[menu.main]]
-identifier = "projects"
-name = "Projects"
-url = "/projects"
-weight = 3
+        [[languages.fr.menu.main]]
+            identifier = "contact"
+            name = "Contact"
+            url = "/contact"
+            weight = 5
+    [languages.en]
+        title = "My blog"
+        languageName = "English"
+        contentDir = "content/en"
+        weight = 20
+        [[languages.en.menu.main]]
+            identifier = "home"
+            name = "Home"
+            pre = "<i class='fas fa-home'></i>"
+            url = "/en/"
+            weight = 1
 
-[[menu.main]]
-identifier = "about"
-name = "About"
-url = "/about"
-weight = 4
+        [[languages.en.menu.main]]
+            identifier = "posts"
+            name = "Posts"
+            url = "/en/posts"
+            weight = 2
 
-[[menu.main]]
-identifier = "contact"
-name = "Contact"
-url = "/contact"
-weight = 5
+        [[languages.en.menu.main]]
+            identifier = "projects"
+            name = "Projects"
+            url = "/en/projects"
+            weight = 3
+
+        [[languages.en.menu.main]]
+            identifier = "about"
+            name = "About"
+            url = "/en/about"
+            weight = 4
+
+        [[languages.en.menu.main]]
+            identifier = "contact"
+            name = "Contact"
+            url = "/en/contact"
+            weight = 5
+

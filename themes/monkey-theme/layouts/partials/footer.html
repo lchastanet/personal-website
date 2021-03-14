@@ -1,2 +1,4 @@
-{{- $transpiled := resources.Get "js/app.js" | babel -}}
+{{ $toggleMenu := resources.Get "js/toggle-menu.js" }} {{ $global :=
+resources.Get "js/app.js" }} {{ $js := slice $toggleMenu $global |
+resources.Concat "js/bundle.js" }} {{- $transpiled := $js | babel -}}
 <script src="{{ $transpiled.Permalink }}"></script>

@@ -1,0 +1,23 @@
+{{ define "main" }}
+<article class="pa3 pa4-ns nested-copy-line-height nested-img">
+    <section
+        class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"
+    >
+        {{- .Content -}}
+    </section>
+    <section class="">
+        {{ range .Paginator.Pages }}
+        <div class="list-content bg-white">
+            {{/* <span class="f6 db">{{ humanize .Section }}</span> */}}
+            <h1 class="f3 near-black">
+                <a href="{{ .Permalink }}" class="link black dim">
+                    {{ .Title }}
+                </a>
+            </h1>
+            <p>{{ .Summary }}</p>
+        </div>
+        {{ end }}
+    </section>
+    {{- template "_internal/pagination.html" . -}}
+</article>
+{{ end }}
