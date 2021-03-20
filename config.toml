@@ -1,5 +1,4 @@
 baseURL = "http://example.org/"
-languageCode = "en-us"
 theme = "monkey-theme"
 paginate = 2
 DefaultContentLanguage = "fr"
@@ -10,6 +9,7 @@ DefaultContentLanguage = "fr"
 
 [languages]
     [languages.fr]
+        languageCode = "fr"
         title = "Mon blogue"
         languageName = "Français"
         contentDir = "content/fr"
@@ -44,6 +44,7 @@ DefaultContentLanguage = "fr"
             url = "/contact"
             weight = 5
     [languages.en]
+        languageCode = "en"
         title = "My blog"
         languageName = "English"
         contentDir = "content/en"
