@@ -1,20 +1,18 @@
 {{ define "main" }}
-<article class="pa3 pa4-ns nested-copy-line-height nested-img">
+<article>
     <h1>Projects</h1>
-    <section class="flex-ns flex-wrap justify-around mt5">
+    <section>
         {{ range .Paginator.Pages }}
-                <div class="bg-white mb3 pa4 gray overflow-hidden">
-                    <h1 class="f3 near-black">
-                        <a href="{{ .Permalink }}" class="link black dim">
-                            {{ .Title }}
-                        </a>
-                    </h1>
-                    <div
-                        class="nested-links f5 lh-copy nested-copy-line-height"
-                    >
-                        {{ .Summary }}
-                    </div>
+            <div class="list-content bg-white">
+                <h1>
+                    <a href="{{ .Permalink }}">
+                        {{ .Title }}
+                    </a>
+                </h1>
+                <div class="listSummary" >
+                    {{ .Summary }}
                 </div>
+            </div>
         {{ end }}
     {{- template "_internal/pagination.html" . -}}
 </article>
