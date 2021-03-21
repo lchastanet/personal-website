@@ -79,4 +79,3 @@ DefaultContentLanguage = "fr"
             name = "Contact"
             url = "/en/contact"
             weight = 5
-
