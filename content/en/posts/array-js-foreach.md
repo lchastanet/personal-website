@@ -2,6 +2,7 @@
 title: "Array Js Foreach"
 date: 2021-02-21T12:19:17+01:00
 draft: true
+tags: ["Javascript"]
 ---
 
 # La méthode forEarch sur les tableaux en javascript.

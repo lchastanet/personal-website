@@ -3,6 +3,9 @@ theme = "monkey-theme"
 paginate = 2
 DefaultContentLanguage = "fr"
 
+[taxonomies]
+    tag = "tags"
+
 [markup]
     [markup.highlight]
         style = "dracula"

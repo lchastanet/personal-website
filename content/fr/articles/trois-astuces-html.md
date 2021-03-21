@@ -2,6 +2,7 @@
 title: "Trois astuces html"
 date: 2021-03-01T12:47:44+01:00
 draft: true
+tags: ["web", "html"]
 ---
 
 # 3 astuces à savoir en HTML

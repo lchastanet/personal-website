@@ -1,8 +1,18 @@
 {{ define "main" }}
 <h1>{{ .Site.Title }}</h1>
+
+<section id="menu">
+    <ul>
+        {{ range .Site.Taxonomies.tags }}
+        <li>
+            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}
+        </li>
+        {{ end }}
+    </ul>
+</section>
+
 {{ $mainSections := .Site.Params.mainSections | default (slice "post") }} {{
 $section := where .Site.RegularPages "Section" "in" $mainSections }}
-
 <div class="pa3 pa4-ns w-100 w-70-ns center">
     {{ $n_posts := $.Param "recent_posts_number" | default 5 }}
 
